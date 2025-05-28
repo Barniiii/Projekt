@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Szamla</title>
+    <style>
+        .form-container {
+            width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+        }
+
+        table,
+        td,
+        th {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <fieldset>
+            <legend>Szamlak</legend>
+            <form action="" id="userForm">
+                <p>
+                    <label for="szamla">Számla_id:</label>
+                    <input type="Integer" name="szamla" id="szamla_id" placeholder="Számla megadása" required>
+                </p>
+                <p>
+                    <label for="szamlaszam">Számlaszám:</label>
+                    <input type="text" name="szamlaszam" id="szamlaszam_id" placeholder="Számlaszám megadása.." required>
+                </p>
+                <p>
+                    <label for="tulajdonos">Tulajdonos:</label>
+                    <input type="text" name="tulajdonos" id="tulajdonos_id" placeholder="Ár megadása.." required>
+                </p>
+                <p>
+                    <label for="tipus">Tipus:</label>
+                    <input type="text" name="tipus" id="tipus_id" placeholder="Készlet megadása.." required>
+                </p>
+                <p>
+                    <label for="egyenleg">Egyenleg:</label>
+                    <input type="real" name="egyenleg" id="egyenleg_id" placeholder="Kategória megadása.." required>
+                </p>
+                <p>
+                    <label for="nyitasdatuma">Nyitasdatuma:</label>
+                    <input type="text" name="nyitasdatuma" id="nyitasdatuma_id" placeholder="Nyitas dátuma megadása.." required>
+                </p>
+
+                <p>
+                    <button type="submit">Elküld</button>
+                </p>
+            </form>
+        </fieldset>
+        <h3>LocalStorage adatok megjelenítése</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th> # </th>
+                    <th>Szamla ID</th>
+                    <th>Szamlaszam</th>
+                    <th>Tulajdonos</th>
+                    <th>Tipus</th>
+                    <th>Egyenleg</th>
+                    <th>Nyitasdatuma</th>
+                </tr>
+            </thead>
+            <tbody id="usersTable"></tbody>
+        </table>
+    </div>
+    <script src="form.js"></script>
+</body>
+
+</html>
